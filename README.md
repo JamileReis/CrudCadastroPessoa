@@ -151,3 +151,60 @@ A API foi construída com foco em:
 * Pronto para avaliação técnica
 
 O Swagger permite validar completamente o funcionamento dos endpoints sem necessidade de ferramentas externas.
+
+-Banco de Dados H2 (Ambiente de Desenvolvimento)
+
+A aplicação utiliza o H2 Database como banco de dados em memória para o ambiente de desenvolvimento, permitindo execução rápida e sem necessidade de instalação de banco externo.
+
+-Configuração
+spring.datasource.url=jdbc:h2:mem:pessoas_db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=dev
+spring.datasource.password=dev
+
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+spring.profiles.active=dev
+ -Acesso ao Console
+
+O console web do H2 está disponível em:
+
+http://localhost:8080/h2-console
+Credenciais de acesso:
+JDBC URL: jdbc:h2:mem:pessoas_db
+Usuário: dev
+Senha: dev
+- Características do H2
+Banco de dados em memória
+Inicializado automaticamente ao subir a aplicação
+Dados são perdidos ao reiniciar o sistema
+Não requer instalação externa
+Ideal para testes e desenvolvimento local
+-Integração com a Aplicação
+
+Fluxo:
+
+Controller → Service → Repository (JPA) → H2 Database
+ -Uso no Desenvolvimento
+Criar dados via Swagger (POST /pessoas)
+Consultar diretamente no banco via console H2
+Validar persistência e relacionamentos
+
+Exemplo de consulta:
+
+SELECT * FROM PESSOA;
+SELECT * FROM ENDERECO;
+ -Observações
+O banco é recriado a cada execução da aplicação
+Utilizado apenas no perfil dev
+Não recomendado para ambientes de produção
+ -Benefícios na Avaliação Técnica
+Execução simplificada (sem dependências externas)
+Facilidade para o avaliador testar a API
+Visualização direta dos dados persistidos
+Rapidez no ciclo de desenvolvimento
