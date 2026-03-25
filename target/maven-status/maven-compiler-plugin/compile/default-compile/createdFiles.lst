@@ -1,0 +1,17 @@
+com/exemplo/pessoaapi/dto/PessoaDTO$PessoaDTOBuilder.class
+com/exemplo/pessoaapi/dto/PessoaDTO.class
+com/exemplo/pessoaapi/exception/GlobalExceptionHandler.class
+com/exemplo/pessoaapi/model/Endereco$EnderecoBuilder.class
+com/exemplo/pessoaapi/controller/PessoaController.class
+com/exemplo/pessoaapi/repository/PessoaRepository.class
+com/exemplo/pessoaapi/dto/EnderecoDTO.class
+com/exemplo/pessoaapi/exception/ResourceNotFoundException.class
+com/exemplo/pessoaapi/model/Pessoa$PessoaBuilder.class
+com/exemplo/pessoaapi/mapper/PessoaMapper.class
+com/exemplo/pessoaapi/model/Pessoa.class
+com/exemplo/pessoaapi/exception/BusinessException.class
+com/exemplo/pessoaapi/dto/EnderecoDTO$EnderecoDTOBuilder.class
+com/exemplo/pessoaapi/PessoaApiApplication.class
+com/exemplo/pessoaapi/repository/EnderecoRepository.class
+com/exemplo/pessoaapi/model/Endereco.class
+com/exemplo/pessoaapi/service/PessoaService.class
